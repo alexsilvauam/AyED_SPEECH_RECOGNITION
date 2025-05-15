@@ -1,0 +1,13 @@
+## 0.1.0 (2025-05-15)
+
+### Feat
+
+- agrega release en .github
+- agrega changelog
+- Configura la gestión de versión en main.py
+
+### Fix
+
+- arregla por nueva vez workflow
+- arregla nuevamente workflows
+- arregla el workflow de github
