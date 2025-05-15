@@ -36,4 +36,5 @@ jobs:
 
       - name: Push changes (changelog and tags)
         run: |
-          git push origin HEAD:master --follow-tags
+          git push origin HEAD:master
+          git push origin --tags
