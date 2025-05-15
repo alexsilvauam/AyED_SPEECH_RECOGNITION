@@ -30,7 +30,7 @@ jobs:
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: cz bump --check-consistency --changelog
+        run: cz bump --changelog --yes
 
       - name: Push changes (changelog and tags)
         run: |
