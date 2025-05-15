@@ -1,0 +1,35 @@
+name: Semantic Release (Python)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  semantic_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-semantic-release commitizen
+
+      - name: Run semantic-release
+        id: semantic_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m semantic_release publish
+
+      - name: Print new version (optional)
+        if: steps.semantic_release.outputs.new_release_version
+        run: echo "Nueva versión publicada: ${{ steps.semantic_release.outputs.new_release_version }}"
