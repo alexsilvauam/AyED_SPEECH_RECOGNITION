@@ -1,3 +1,10 @@
+## 0.1.3 (2025-05-15)
+
+### Fix
+
+- fix basico 2
+- arreglo basico release 1
+
 ## 0.1.2 (2025-05-15)
 
 ### Fix
