@@ -1,3 +1,10 @@
+## 0.1.2 (2025-05-15)
+
+### Fix
+
+- minor fix en release.yml
+- arreglo del WorkFlow
+
 ## 0.1.1 (2025-05-15)
 
 ### Fix
