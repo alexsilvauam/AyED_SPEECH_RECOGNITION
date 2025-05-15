@@ -19,6 +19,12 @@ jobs:
       - name: Install Commitizen
         run: pip install commitizen
 
+      - name: Set Git user email
+        run: git config --global user.email "silvaajc@uamv.edu.ni"
+
+      - name: Set Git user name
+        run: git config --global user.name "alexsilvauam"
+
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
